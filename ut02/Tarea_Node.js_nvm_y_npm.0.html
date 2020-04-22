@@ -1,0 +1,331 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js NVM NPM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link href="css/estilo.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Título-->
+    <div class="row  bg-secondary rounded-2 rounded ">
+            <div class="col-6  text-white mb-2 d-flex align-items-center">
+               <h1 class="ml-4 display-4">UT 02 PARTE III</h1>
+            </div>
+            <div class="col-6">
+                <img  class=" my-2 rounded-2 rounded float-right"  width="200px" height="100px" src="img/1.gif" alt="Card image cap">
+            </div>
+    </div>
+    <!-- Sumario de la página -->
+    <div class="row ">
+        <div class="col">
+            <div class="alert alert-success mt-4" role="alert">
+                <h2 class="alert-heading">Sumario</h2>
+                <hr>
+                <ul class="mb-0">
+                    <li>Node.js	</li>
+                    <li>Tipos de editores de código		</li>
+                    <ul>
+                        <li>WYSIWYG		</li>
+                        <li>Editor HTML textual		</li>
+                        <li>Editores de código online.	</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Qué es Node.js -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-light mb-3">
+                <div class="card-header">
+                    <h2>Node.js</h2>
+                </div>
+                <div class="card-body">
+                        <div class="alert alert-dark" role="alert">
+                            <h4>¿Qué es Node.js?</h4>
+                            <p class="card-text">Node.js es un entorno en tiempo de ejecución multiplataforma, de código
+                                abierto, para la capa del servidor (pero no limitándose a ello) basado en el lenguaje de
+                                programación JavaScript, asíncrono, con E/S de datos en una arquitectura orientada a
+                                eventos y basado en el motor V8 de Google. Fue creado con el enfoque de ser útil en la
+                                creación de programas de red altamente escalables, como por ejemplo, servidores web.
+                            </p>
+                            <p class="card-text">Node.js también nos permite practicar la programación Javascript sin la necesidad e utilizar
+                            el motor del navegador para la ejeción del código.</p>
+                            <p class="card-text">Tambiés es necesario disponer de Node.js para la instalación del gestor de paquetes NPM,
+                            nos va a facilitar la instalación de utilidades Front-End en el sistema.</p>
+                            <h4>Instalación</h4>
+                            <p class="card-text">Se puede realizar descargando de su web en la dirección <a href="https://nodejs.org">https://nodejs.org</a> </p>
+                            <p class="card-text">Pero es mejor usar la herramienta NVM ya que nos permitirá lidiar con los problemas de versiones que aparecen en
+                            Node.js ya que al ser una herramienta código abierto tiene diferentes versiones con diferentes tipos de soporte</p>
+                            <p class="card-text"><strong>LTS. Long Term Support</strong> Soporte de Largo Plazo, versión que se asegura estabilidad y que dispondrá
+                            de actualizaciones durante un tiempo muy prolongado.</p>
+                            <p class="card-text"><strong>Current</strong>Actual. Última versión pero no se considera estable. Cada cierto tiempo la Current pasa a <strong>
+                                Active</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Qué es NVM -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-light mb-3">
+                <div class="card-header">
+                    <h2>NVM</h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-dark" role="alert">
+                        <h4>¿Qué es NVM?</h4>
+                        <p class="card-text">Node Version Manager (nvm), permite instalar diferentes versiones de nodejs
+                            sin tener conflicto entre ellas.
+                        </p>
+                        <h4>Instalación</h4>
+                        <p class="card-text">
+                            Para instalar o actualizar, se debe ejecutar el script install.sh disponible en <a
+                                href="https://github.com/nvm-sh/nvm">https://github.com/nvm-sh/nvm</a> o directamente ejecutando
+                            cualqueira de estos dos comandos.</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+                            <hr>
+                            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+                        </div>
+
+                        <p class="card-text">Comandos básicos de NVM:</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                                nvm install node
+                        </div>
+                        <p class="card-text">Si se desea instalar alguna versión especifica de Node:</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            nvm install 10.16.0
+                        </div>
+                        <p class="card-text">Para conocer todas las versiones de Node disponible: </p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            nvm ls-remote
+                        </div>
+                        <p class="card-text">Para conocer la versión de Node actual en uso:</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            nvm current
+                        </div>
+                        <p class="card-text">Para saber que versiones de Node hay instaladas:</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            nvm ls</div>
+                        <p> Si se desea ejecutar algún script con alguna versión especifica de Node:</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            nvm exec 10.10.0 node script.js</div>
+                        <p class="card-text"> Para conocer el path de una versión de Node instalada:</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            nvm which 10.10.0</div>
+                        <p class="card-text">Si se desea desinstalar una versión de Node:</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            nvm uninstall 10.10.0
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Qué es NPM -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-light mb-3">
+                <div class="card-header">
+                    <h2>NPM</h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-dark" role="alert">
+                        <h4>¿Qué es NPM?</h4>
+                        <p class="card-text">npm es el sistema de gestión de paquetes por defecto para Node.js, un
+                            entorno de ejecución para JavaScript, bajo Artistic License 2.0.
+                        </p>
+                        <p class="card-text">Desde la versión 0.6.3 de Node.js npm es instalado automáticamente con el
+                            entorno. npm se ejecuta desde la línea de comandos y maneja las dependencias para una
+                            aplicación. Además, permite a los usuarios instalar aplicaciones Node.js que se encuentran
+                            en el repositorio.</p>
+                        <p class="card-text">Tambiés es necesario disponer de Node.js para la instalación del gestor de paquetes NPM,
+                            nos va a facilitar la instalación de utilidades Front-End en el sistema.</p>
+                        <p class="card-text">Los paquetes que instalemos lo podemos hacer de dos formas en el directorio del proyecto actual(donde se
+                        ejecuta el comando) o con el parámetro -g, de esta última forma estará disponible en cualquier parte que se necesite.</p>
+                        <p class="card-text"> Presentamos un listado de Comandos básicos para nuevos usuarios de NPM.</p>
+                        <p class="card-text">Inicializar el proyecto crea el archivo package.json</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm init
+                        </div>
+
+
+
+                        <p class="card-text">Buscar paquetes</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm search [nombreDelPaquete]
+                        </div>
+
+
+
+                        <p class="card-text">Instalar un paquete</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm install [nombreDelPaquete]
+                        </div>
+                        <p class="card-text">Instalar una version especifica de un paquete usando “version” irá la versión especificada,
+                            de lo contrario, si no se especifica, se instalará la última disponible.</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm install nombreDelPaquete@version
+                        </div>
+                        <p class="card-text">Instalar el paquete y modifica el archivo package.json agregando la librería en las dependencias</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm install [nombreDelPaquete] --save
+                        </div>
+                        <p class="card-text">Instalar el paquete y modifica el archivo package.json agregando la librería en las dependencias
+                            solo necesarias para desarrollo</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm install [nombreDelPaquete] --save-dev
+                        </div>
+                        <p class="card-text"> Si no se especifica un paquete, se entiende que se desea verificar/instalar todas las dependencias
+                            dentro del archivo package.json. Esto es habitual, cuando se descargan proyectos o aplicaciones de g
+                            ithub, ya que las dependencias deben ser instaladas luego de descargar el proyecto (por razones de tamaño).</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm install
+                        </div>
+
+
+
+                        <p class="card-text">Con la opción -g o –global se le está indicando a npm que debe instalar el paquete de manera Global,
+                            esto quiere decir que se va a poder utilizar desde cualquier directorio.</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm install -g [nombreDelPaquete]
+                        </div>
+                        <p class="card-text">Eliminar paquete local</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            <p>npm rm [nombreDelPaquete]</p>
+                            <p>npm uninstall [nombreDelPaquete]</p>
+                        </div>
+                        <p class="card-text">Eliminar paquete de forma global</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            <p>npm rm -g [nombreDelPaquete]</p>
+                            <p>npm uninstall -g [nombreDelPaquete]</p>
+                        </div>
+
+                        <p class="card-text"> Listar las dependencias de mi proyecto</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm ls
+                        </div>
+                        <p class="card-text">Consultar las últimas versiones compatibles con las librerías que tienes en tu proyecto</p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm outdated
+                        </div>
+                        Actualizar todas las librerías de tu proyecto que sean compatibles
+                        <p class="card-text"></p>
+                        <div class="alert alert-success mt-4" role="alert">
+                            npm update -save
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Qué es GIt -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card bg-light mb-3">
+                <div class="card-header">
+                    <h2>NPM</h2>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-dark" role="alert">
+                        <h4>¿Qué es Git?</h4>
+                        <p class="card-text">Git (pronunciado "guit"2​) es un software de control de versiones diseñado
+                            por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de
+                            versiones de aplicaciones cuando éstas tienen un gran número de archivos de código
+                            fuente. Su propósito es llevar registro de los cambios en archivos de computadora y
+                            coordinar el trabajo que varias personas realizan sobre archivos compartidos.
+                        </p>
+                        <p class="card-text">Vamos a tener dos formas de utilizar Git una de forma local y remota.</p>
+                        <p class="card-text">En forma local lo que hacemos es iniciar un directorio para un proyecto.
+                            Cuando lo consideremos necesario iremos haciendo
+                        commint de esta forma si tengo problemas con alguna modificación podré volver a un estado anterior.
+                            También puedo llevar varias ramas de desarrollo</p>
+                        <p class="card-text">En modo remoto la diferencia es que cuando relizo los commint también los puedo
+                        subir a un repositorio, donde otros pueden sincronizar, descargar, ...
+                        </p>
+                        <pclass="card-text"></pclass></p>
+                        <h4>Instalar Git</h4>
+                        <div class="alert alert-success mt-4" role="alert">
+                            sudo apt install git
+                        </div>
+                        <h4>Configurar Git</h4>
+                        <p class="card-text">Primero crearemos una cuenta en <a href="https://github.com">https://github.com</a></p>
+                        <p class="card-text">Si utilizamos la opción --global, esto solo lo tenemos que hacer una vez, puesto
+                            que a partir de entonces lo tomará por defecto o sin esa opción en cada proyecto (directorio) ejecutamos el comando sin --golbal
+                            . Así por ejemplo,
+                            <div class="alert alert-success mt-4" role="alert">
+                                git config --global user.name "RicardoUsuarioGit"
+                                <hr>
+                                git config --global user.email Usuario@mi_correo.es
+                            </div>
+                        </p>
+                        <h4>Configurar Git</h4>
+                        <p class="card-text">Creamos un directorio
+                            <div class="alert alert-success mt-4" role="alert">
+                                mkdir proyecto1
+                                <hr>
+                                cd proyecto1
+                                <hr>
+                                git init
+                            </div>
+                            Si vemos el contenido del directorio encontramos que se ha creado un directorio oculto llamado
+                        .git donde se encuentran los archivos necesarios para guardar las versiones.
+                        </p>
+                        <p class="card-text">Si lo que queremos es descargar un repositorio de la nuve en el directorio utilizamos:
+                            <div class="alert alert-success mt-4" role="alert">
+                                git clone https://github.com/RicardoUsuarioGit/proyecto1.git
+                            </div>
+                            Nos descarga los ficheros del proyecto en el directorio donde nos encontramos.
+                        </p>
+                        <h4>Añadir ficheros al proyecto</h4>
+                        <p class="card-text">Los únicos ficheros que se tendrán en cuenta para al hacer un commit serán los
+                            indicados con el comando:
+                            <div class="alert alert-success mt-4" role="alert">
+                               git add nombre_fichero
+                                <hr>
+                                git add . (para todos los ficheros)
+                            </div>
+                           Solo se procesa los que se modificarán desde el anterior commit
+                        </p>
+                        <h4>Guardar los ficheros modificados </h4>
+                        <p class="card-text">
+                            <div class="alert alert-success mt-4" role="alert">
+                                git commit -m "Maquetación hecha"
+                            </div>
+                        </p>
+                        <h4>Publicar en el repositorio actual </h4>
+                        <p class="card-text">
+                            <div class="alert alert-success mt-4" role="alert">
+                                git push rama
+                            </div>
+                        </p>
+                        <h4>Descargar el contenido del repositorio remoto y mezclar con el actual</h4>
+                        <p class="card-text">
+                        <div class="alert alert-success mt-4" role="alert">
+                            git push rama
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pié de página-->
+    <div class="row ">
+        <div class="col" >
+            <div class="alert alert-success mt-4" role="alert">
+                <h4 class="alert-heading">Enlaces</h4>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
