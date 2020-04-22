@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea02_03</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Título-->
+    <div class="row  bg-secondary rounded-2 rounded ">
+        <div class="col-6  text-white mb-2 d-flex align-items-center">
+            <h1 class="ml-4 display-4">Tarea02_03</h1>
+        </div>
+        <div class="col-6">
+            <img  class=" my-2 rounded-2 rounded float-right"  width="200px" height="100px" src="img/1.gif" alt="Card image cap">
+        </div>
+    </div>
+    <!-- Acordeon contenido tarea -->
+    <div class="row ">
+        <div class="col">
+            <div class="alert alert-success mt-4" role="alert">
+                <h2 class="alert-heading">Sumario</h2>
+                <hr>
+                <div id="accordion ">
+                    <!-- Descripción tarea -->
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4>Descripción de la tarea</h4>
+                                </button>
+                            </h3>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul  >
+                                    <li > Prepara un documento PDF para poder ir guardando capturas de todos
+                                        los pasos  que realices en esta tarea.</li>
+                                    <li >Crear una cuenta Github.</li>
+                                    <li >Crea una carpeta en tu ordenador llamada parAdwC</li>
+                                    <li >Instala GitHub en tu ordenador.</li>
+                                    <li > Inicia la carpeta llamada parAdwC para utilizar con Git y haz la configuración inicial de
+                                        usuario y email de usuario.</li>
+                                    <li >Crea otro carpeta dentro de parAdwC con en el nombre UT02</li>
+                                    <li >Crea dentro de UT02 haz una pagina web donde solo debe aparecer una etiqueta h1 con tu nombre
+                                        y apellidos.</li>
+                                    <li > Haz un commit desde parAdwC y sube a GitHub todo lo que hay dentro.</li>
+                                    <li >Desde la página web de Git crea un fichero de texto dentro de UT02 llamado nuevo.txt y dentro
+                                        estará tu nombre</li>
+                                    <li >Haz un pull dentro del directorio parAdwC y modifica la página web y el fichero de texto,
+                                        añadiendo un parafo con "Desarrollo Web Cliente"</li>
+                                    <li > Pega en el directoria UT02 el documento pdf con las capturas de realizar
+                                        los pasos anteriores.</li>
+                                    <li > Vuelve a hacer un commit y un push para que suban a GitHub</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Rubrica -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h4>Rúbrica</h4>
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <h4>Contenidos 7 puntos uno por apartado </h4>
+                                <ul >
+                                    <li>Crear cuenta Git</li>
+                                    <li>Instalar Git en Ordenador</li>
+                                    <li>Inicia Git en carpeta parAdwC</li>
+                                    <li>Realiza primer commit correctamente</li>
+                                    <li>Crea en la web de Git archivo nuevo.txt</li>
+                                    <li>Realiza pull y trae fichero nuevo.txt</li>
+                                    <li>Realiza último commit y push</li>
+                                </ul>
+                                <h4>Contenido documento PDF 1 punto 0,5 por apartado</h4>
+                                <ul >
+                                    <li>Formato del documento, nombre, número de página, margenes, justificación</li>
+                                    <li>Tamaño imágenes (se captura lo necesario no todo)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Entrega -->
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h4>Entrega</h4>
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <li >Dirección de GitHub.</li>
+                                <li >Fichero PDF</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Rubrica -->
+    <!-- Pié de página-->
+    <div class="row ">
+        <div class="col" >
+            <div class="alert alert-success mt-4" role="alert">
+                <h4 class="alert-heading">Enlaces</h4>
+                <!--<p> Vídeo ejemplo uso Git</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ej1bIfd-no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
