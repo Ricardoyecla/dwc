@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UT03 Fundamentos de JavaScript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12  p-3 mt-2 bg-success text-white" >
+                <h2 bg-info>UT03 Introducción JavaScript ParteI</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>¿Cómo ejecutar código JavaScript?</h3>
+            </div>
+        </div>
+        <!-- Contenido -->
+        <div class="row">
+            <div class="col">
+                <p>Vamos a tener dos formas principales de ejecutar código JavaScript la primera es desde el navegador y la otra es utilizando Node.js desde
+                la consola</p>
+                <p>Debemos indicar que la segunda forma a nosotros desde la parte del cliente que es desde la que vamos a programar es la menos importante,
+                aunque nos puede ser de utilidad para hacer pruebas rápidas.</p>
+                <div class="card border-dark mt-3" >
+                    <div class="card-header"><h4>Ejecutar JavaScript desde el navegador</h4></div>
+                    <div class="card-body text-dark">
+                        <h5 class="card-title">Desde el navegador con la etiqueta &ltscript&gt</h5>
+                        <p>Podemos  colocar la etiqueta &ltscript&gt en el Head o Body.</p>
+                        <p>En el Head se suele cargar librerías con funciones globales. La carga de este código se hace de forma asincrona por lo que aunque este
+                        al final de la página puede que se ejecute antes de que se carge todos los elementos</p>
+                        <p>En el ejemplo escribimos dentro del documento.</p>
+
+                        <pre class="text-left p-1 m-1 alert-success" role="alert" >
+&lt!DOCTYPE html&gt
+&lthtml lang="es"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtEjemplo ejecución directa&lt/title&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtPágina con Javascript&lt/h1&gt
+        &ltp&gtJavaScript escribe en la página&lt/p&gt.&lt/p&gt
+            &ltscript&gt
+                document.write("Yo he escrito");
+            &lt/script&gt
+        &ltp&gtPágina completa.&lt/p&gt
+    &lt/body&gt
+&lt/html&gt
+                        </pre>
+
+
+                        <h5 class="card-title">Mostrar información en la consola</h5>
+                        <p class="card-text">Los navegadores disponen de una <strong>Consola</strong> que nos van a permitir
+                        depurar la ejecución de los programas mostrando información en ella. Pulsamos F12 para mostra la consola
+                        o en el menú de opciones del navegador seleccionamos opciones de depuración</p>
+                        <pre class="text-left p-1 m-1 alert-success" role="alert" >
+&lt!DOCTYPE html&gt
+&lthtml lang="es"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtEjemplo ejecución directa&lt/title&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtPágina con Javascript&lt/h1&gt
+        &ltp&gtJavaScript escribe en la página&lt/p&gt.&lt/p&gt
+            &ltscript&gt
+               console.log("Aparece en la consola no en el documento");
+            &lt/script&gt
+        &ltp&gtPágina completa.&lt/p&gt
+    &lt/body&gt
+&lt/html&gt
+                        </pre>
+                        <h5 class="card-title">JavaScript en un fichero externo</h5>
+                        <p class="card-text">Podemos utilizar en la etiqueta <strong>&ltscript&gt</strong> el atributo
+                        <strong>&ltsrc&gt</strong> donde podemos indicar la ubicación del fichero con extensión js que
+                        queremos cargar.</p>
+                        <pre class="text-left p-1 m-1 alert-success" role="alert" >
+
+        &ltscript src="js/fichero.js"&gt&ltscript&gt
+                        </pre>
+                        <h5 class="card-title">Atributos de  &ltscript&gt : async, defer, integrity y corossorigin.</h5>
+                        <p class="card-text">Podemos utilizar en la etiqueta <strong>&ltscript&gt</strong> el atributo
+                            <strong>&ltsrc&gt</strong> donde podemos indicar la ubicación del fichero con extensión js que
+                            queremos cargar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
