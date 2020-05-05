@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea02_03</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Título-->
+    <div class="row  bg-secondary rounded-2 rounded ">
+        <div class="col-6  text-white mb-2 d-flex align-items-center">
+            <h1 class="ml-4 display-4">Tarea03_02</h1>
+        </div>
+        <div class="col-6">
+            <img  class=" my-2 rounded-2 rounded float-right"  width="200px" height="100px" src="img/1.gif" alt="Card image cap">
+        </div>
+    </div>
+    <!-- Acordeon contenido tarea -->
+    <div class="row ">
+        <div class="col">
+            <div class="alert alert-success mt-4" role="alert">
+                <h2 class="alert-heading">Sumario</h2>
+                <hr>
+                <div id="accordion ">
+                    <!-- Descripción tarea -->
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Descripción de la tarea
+                                </button>
+                            </h3>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Hacer una aplicación web que pida un número y muestre la siguiente información:</p>
+                                <ul  >
+                                    <li>Si el dato introducido no es un número, te informará y volverá a pedir el número.</li>
+                                    <li>Si el número es negativo mostrará por consola la secuencia de números pares hasta llevar a 0 y la suma de todos ellos
+                                    </li>
+                                    <li>Si el número es positivo mayor de 1000 mostrará la secuencia de números que hay desde el 0 al 1000 pero solo los múltiplos de 4 y la suma de todos ellos.
+                                    </li>
+                                    <li>Si el número es positivo menor de 1000 mostrará una secuencia de números de la siguiente forma hasta llegar a 0. La mitad del número, anterior y posterior, la mitad del número -1 y anterior y posterior, la mitad del número -2 y anterior y posterior, …. termina el proceso al llegar a 0 o número negativo y la suma de todos ellos.
+                                    </li>
+                                </ul>
+                                <h4>Rúbrica</h4>
+                                <div class="card-body">
+                                    <h4>Contenidos 7 puntos uno por apartad del enunciado</h4>
+                                    <h4>Contenido documento js y html 1 punto 0,5 por apartado</h4>
+                                    <ul >
+                                        <li>Comentarios en el código</li>
+                                        <li>Esta identado el código</li>
+                                        <li>Entrega dos ficheros</li>
+                                    </ul>
+                                    <h4>Puntualidad 2 puntos</h4>
+                                    <ul >
+                                        <li>En fecha 2 puntos</li>
+                                        <li>Dos días 1,5 puntos</li>
+                                        <li>Tres días 1 puntos</li>
+                                        <li>Cuatro días 0,5 puntos</li>
+                                    </ul>
+                                </div>
+                                <h4>Entrega</h4>
+                                <div class="card-body">
+                                    <ul >
+                                        <li >Fichero js y html</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Rubrica -->
+                    <!-- Entrega -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Rubrica -->
+    <!-- Pié de página-->
+    <div class="row ">
+        <div class="col" >
+            <div class="alert alert-success mt-4" role="alert">
+                <h4 class="alert-heading">Enlaces</h4>
+                <!--<p> Vídeo ejemplo uso Git</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ej1bIfd-no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
