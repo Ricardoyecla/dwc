@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UT04 Estructuras de dátos JavaScript </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Cabecera -->
+        <div class="row">
+            <div class="col-6  p-2 mt-2 bg-success text-white" >
+                <h2 bg-info>UT04 Estructuras de dátos JavaScript </h2>
+            </div>
+            <div class="col-4  mt-2 bg-success"></div>
+            <div class="col-2  p-2 mt-2 bg-success">
+                <img src="https://miro.medium.com/max/800/1*bxEkHw1xewxOFjmGunb-Cw.png" width="70%" alt="">
+            </div>
+        </div>
+         <!--Cabecera Arrays -->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>Arrays</h3>
+            </div>
+        </div>
+        <!--Contenido Arrays -->
+        <div class="row">
+            <div class="col">
+                <p>El objeto Array de JavaScript es un objeto global que es usado en la construcción de arrays, que son
+                    objetos tipo lista de alto nivel.</p>
+                <h5 class="">Descripción</h5>
+                <p>Los "arrays" son  objetos tipo-lista,cuyo prototipo tiene métodos para efectuar operaciones de recorrido
+                    y de mutación. Ni la longitud de una matriz de JavaScript ni los tipos de sus elementos son fijos.
+                    Dado que la longitud de una matriz puede cambiar en cualquier momento, y los datos se pueden
+                    almacenar en ubicaciones no contiguas  en la matriz, no se garantiza que las matrices de JavaScript
+                    sean densas; esto depende de cómo el programador elija usarlos.</p>
+                <!--Creación y operaciones básicas sobre arrays-->
+                <div class="  mr-4 card border-dark mt-3 p-3" >
+                    <div class="card-header"><h4>Creación y operaciones básicas</h4></div>
+                    <div class=" card-body text-dark">
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Creación</h5>
+                        <p>Dos formas de crear <strong>Arrays</strong></p>
+                        <strong>Syntax</strong>
+                        <div class=" rounded p-2 m-1 alert-success" role="alert" >
+                            <p>var array_name = [item1, item2, ...];</p>
+                            <p>var array_name = new Array(item1, item2, …)</p>
+                         </div>
+                        <strong>Ejemplos</strong>
+                        <div class="  rounded p-2 m-1 alert-success" role="alert" >
+                            <p>var cars = new Array("Saab", "Volvo", "BMW");</p>
+                            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Acceder a un elemento</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>var name = cars[0];</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Modificar un elemento del Array</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>cars[0] = "Opel";</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Uso de nombres como indice</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>var person = {firstName:"John", lastName:"Doe", age:46};</p>
+                            <p>Nombre = person[“firstName”]</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Bucle sobre un Array</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+cars.forEach(function (elemento, indice, array) {
+    console.log(elemento, indice);
+});
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Eliminar Elemento de un Array</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+                            <p>delete cars[2];</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Valores indefinidos en un Array</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+                            <p>delete cars[1];</p>
+                            <p>console.log(cars[1]); // undefined</p>
+                            <p>console.log(cars[2]); // BMW</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Un Array puede contener diferentes tipos de elementos.</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>myArray[0] = Date.now;</p>
+                            <p>myArray[1] = myFunction;</p>
+                            <p>myArray[2] = myCars;</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Declarar Array como const.</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>const  cars = ["Saab", "Volvo", "BMW"];</p>
+                            <p>var cars2 = [“hola”,”juan”];</p>
+                            <p>cars[1]=”Abarth”;</p>
+                            <p>cars = cars2 ; //Esto da error</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
