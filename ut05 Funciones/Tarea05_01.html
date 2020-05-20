@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea05_01</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Título-->
+    <div class="row">
+        <div class="col-6  p-2 mt-2 bg-success text-white" >
+            <h2 bg-info>Tarea05_01 </h2>
+        </div>
+        <div class="col-4  mt-2 bg-success"></div>
+        <div class="col-2  p-2 mt-2 bg-success">
+            <img src="https://miro.medium.com/max/800/1*bxEkHw1xewxOFjmGunb-Cw.png" width="70%" alt="">
+        </div>
+    </div>
+
+    <!-- Contenido tarea -->
+    <div class="row ">
+        <div class="col">
+            <div class="alert alert-success mt-4" role="alert">
+                <h2 class="alert-heading">Sumario</h2>
+                <hr>
+                <div id="accordion ">
+                    <!-- Descripción tarea -->
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4>Descripción de la tarea</h4>
+                                </button>
+                            </h3>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Hacer una página web que lea palabras hasta que el usuario cancele o deje el cuadro
+                                    vacío y mostraremos las repeticiones de las palabras.</p>
+                                <ul  >
+                                    <li> Crear una función que reciba un array de palabras.
+                                        <ul>
+                                            <li>La función devolverá un mapa que contenga como clave cada palabra y el
+                                                valor es el número de veces que esa palabra aparece en el array.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Cada palabra leída será procesada, de la siguiente forma:
+                                        <ul>
+                                            <li>Eliminará los posibles espacios en blanco.</li>
+                                            <li>Pondrá todos los caracteres en minúscula salvo el primero que irá en mayúsculas.</li>
+                                            <li>De debe utilizar una función flecha.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Crear una función que muestre en el documento una tabla de ocurrencias de palabras.
+                                        <ul>
+                                            <li>Se le debe pasar el mapa.</li>
+                                            <li>Se le podrá pasar el ancho del borde y color.</li>
+                                            <li>Si no se pasa borde será de 1px y negro.</li>
+                                            <li>Si se pasa ancho del borde y no color será negro.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h4>Rúbrica</h4>
+                                <div class="card-body">
+                                    <h4>Contenidos 7 puntos</h4>
+                                    <ul >
+                                        <li>Lee correctamente las palabras.</li>
+                                        <li>Almacena corectamente las palabras en el array</li>
+                                        <li>Procesa las palabras como se pide.</li>
+                                        <li>Declara correctamente los parámetros de la función para mostrar la tabla</li>
+                                        <li>Usa la versión correcta de bucle for</li>
+                                        <li>Usa la función flecha.</li>
+                                    </ul>
+                                    <h4>Contenido documento js y html 1 punto </h4>
+                                    <ul >
+                                        <li>Comentarios en el código</li>
+                                        <li>Esta identado el código</li>
+                                        <li>Usa correctamente las estructuras condicionales y los bucles</li>
+                                    </ul>
+                                    <h4>Puntualidad 1 puntos</h4>
+                                    <ul >
+                                        <li>En fecha 1 puntos</li>
+                                        <li>Dos días 0,5 puntos</li>
+                                    </ul>
+                                </div>
+                                <h4>Entrega</h4>
+                                <div class="card-body">
+                                    <ul >
+                                        <li >Fichero js</li>
+                                        <li >Fichero html</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Rubrica -->
+                    <!-- Entrega -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Rubrica -->
+    <!-- Pié de página-->
+    <div class="row ">
+        <div class="col" >
+            <div class="alert alert-success mt-4" role="alert">
+                <h4 class="alert-heading">Enlaces</h4>
+                <!--<p> Vídeo ejemplo uso Git</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1ej1bIfd-no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
