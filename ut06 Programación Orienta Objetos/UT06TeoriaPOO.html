@@ -23,13 +23,12 @@
                 <h3 bg-info>Creación de Objetos sin constructor.</h3>
             </div>
         </div>
-        <!--Contenido Arrays -->
+        <!--Contenido Objetos -->
         <div class="row">
             <div class="col">
                 <p>Se usa para crear objetos pequeños  directamente mediante el uso de asignaciones de propiedades y/o
                     métodos a un objeto o cuando se declara el objeto, en los dos casos a medida que se va programando.</p>
-
-                <!--Creación y operaciones básicas sobre arrays-->
+                <!--reación objeto-->
                 <div class="  mr-4 card border-dark mt-3 p-3" >
                     <div class="card-header"><h4>Creación objeto</h4></div>
                     <div class=" card-body text-dark">
@@ -115,24 +114,224 @@ for (let propiedad in poligono_regular){
                         </div>
                         <p>Se podría usar <strong>typeof</strong> poligono_regular[propiedad] != <strong>“function”</strong> para no mostrar las
                             funciones o == para mostrar solo las funciones.</p>
-                        <h5 class="p-2 bg-warning rounded  bordered card-title">Un Array puede contener diferentes tipos de elementos.</h5>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Uso de This</h5>
+                        <p>Es el objeto contexto de JavaScript en el cual se está ejecutando el código actual.</p>
+                        <p>Lo utilizamos para acceder a las propiedades y métodos  independientemente de cual sea el
+                            nombre del objeto, de esta formas nos abstraemos del nombre del objeto.</p>
                         <div class="rounded  p-2 m-1 alert-success" role="alert" >
-                            <p>myArray[0] = Date.now;</p>
-                            <p>myArray[1] = myFunction;</p>
-                            <p>myArray[2] = myCars;</p>
+                            <pre>
+ let poligono_regular = {
+   	lados:4,
+   	tamanoLado:2,
+   	nombre:'cuadrado',
+   	area:function () {
+        return this.tamanoLado * this.tamanoLado
+   	}
+};
+                        </pre>
                         </div>
-                        <h5 class="p-2 bg-warning rounded  bordered card-title">Declarar Array como const.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Creación de Objetos con constructor. -->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>Creación de Objetos con constructor.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p> Puedes crear un objeto con estos dos pasos:</p>
+                <ul>
+                    <li>Definir el tipo de objeto escribiendo una función constructora. Existe una fuerte convención,
+                        con buena razón, para utilizar en mayúscula la letra inicial.</li>
+                    <li>Crear una instancia del objeto con el operador new.</li>
+                </ul>
+
+                <!--Creación objeto-->
+                <div class="  mr-4 card border-dark mt-3 p-3" >
+                    <div class="card-header"><h4>Creación objeto</h4></div>
+                    <div class=" card-body text-dark">
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Creación</h5>
+                        <p>Para definir un tipo de objeto, crea una función para el objeto que especifique su nombre,
+                            propiedades y métodos.</p>
+                        <strong>Ejemplo</strong>
+                        <div class=" rounded p-2 m-1 alert-success" role="alert" >
+                            <pre>
+//Función Constructora.
+
+function Poligono_regular(lados,nombre) {
+    this.lados=lados;
+    this.nombre=nombre;
+    this.mostrarInfo=()=>`Soy un ${this.nombre} y tengo ${this.lados} lados\n`;
+}
+                            </pre>
+                        </div>
+                        <p>Observa el uso de <strong>this</strong> para asignar valores a las propiedades del objeto en función
+                            de los valores pasados ​​a la función.</p>
+                        <p><strong>Ahora puedes crear un objeto llamado Poligono_regular de la siguiente manera:</strong></p>
                         <div class="rounded  p-2 m-1 alert-success" role="alert" >
-                            <p>const  cars = ["Saab", "Volvo", "BMW"];</p>
-                            <p>var cars2 = [“hola”,”juan”];</p>
-                            <p>cars[1]=”Abarth”;</p>
-                            <p>cars = cars2 ; //Esto da error</p>
+                            <p><strong>Ahora puedes crear  objetos del tipo Poligono_regular de la siguiente manera:</strong></p>
+                            <pre>
+let a=new Poligono_regular(4,'Cuadrado');
+let b=new Poligono_regular(3,"Triangulo");
+console.log(a.mostrarInfo()+"  "+b.mostrarInfo())
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">El operador instanceof.</h5>
+                        <p>Utilice instanceof cuando necesite confirmar el tipo de un objeto en tiempo de ejecución.</p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+let a=new Poligono_regular(4,'Cuadrado');
+let b=new Poligono_regular(3,"Triangulo");
+
+console.log(a instanceof Poligono_regular);
+console.log(a instanceof String);
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">¿Qué son los prototipos?.</h5>
+                        <p>Es el mecanismo que utiliza javascript para implementar la herencia. El prototipo es la parte
+                            común de los objetos del mismo tipo.</p>
+                        <p>Para acceder al prototipo de un objeto  utilizamos la propiedad <strong>__proto__</strong>.</p>
+                        <p><strong>Ejemplo</strong></p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+
+function Poligono_regular(lados,nombre) {
+	this.lados=lados;
+    this.nombre=nombre;
+    this.mostrarInfo=()=>`Soy un ${this.nombre} y tengo ${this.lados} lados\n`;
+}
+
+let a=new Poligono_regular(4,'Cuadrado');
+let b=new Poligono_regular(3,"Triangulo");
+
+console.log(a instanceof Poligono_regular);
+console.log(a instanceof String);
+
+console.log(a.__proto__);
+consola
+true
+false
+Poligono_regular {}
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Modificar un prototipo..</h5>
+                        <p>Podemos añadir una nueva propiedad o método de un prototipo de la siguiente manera</strong> </p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+function Poligono_regular(lados,nombre) {
+	this.lados=lados;
+    this.nombre=nombre;
+    this.mostrarInfo=()=>`Soy un ${this.nombre} y tengo ${this.lados} lados\n`;
+}
+
+let a=new Poligono_regular(4,'Cuadrado');
+let b=new Poligono_regular(3,"Triangulo");
+
+Poligono_regular.prototype.U;
+Poligono_regular.prototype.U=5;
+
+Poligono_regular.prototype.Angulo_Interior=function(){
+    return 180*(this.lados-2)/this.lados;
+}
+// Solo se lo para el objeto a
+
+a.U=4;
+
+console.log(a.Angulo_Interior());
+console.log(a)
+console.log(b);
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Herencia prototípica.</h5>
+                        <p> ¿Cómo creamos un objeto en
+                            JavaScript que hereda de otro objeto?</p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+//Función Constructora.
+
+function Poligono_regular(lados,nombre) {
+    this.lados=lados;
+    this.nombre=nombre;
+    this.mostrarInfo=()=>`Soy un ${this.nombre} y tengo ${this.lados} lados\n`;
+}
+
+//Añadimos una propiedad nueva llamada a Poligono_regular llamada U
+Poligono_regular.prototype.U;
+Poligono_regular.prototype.U=5;
+
+//Añadimos un Método nueva llamada a Poligono_regular llamada Angulo_Interior
+Poligono_regular.prototype.Angulo_Interior=function(){
+    return 180*(this.lados-2)/this.lados;
+}
+
+// Cuadrado hereda de Poligono_regular mediante this.__proto__ = new clase_padre
+
+function Cuadrado(){
+   this.__proto__=new Poligono_regular(4,"Cuadrado");
+    this.mostrarInfo=()=>"hola";
+    this.solodelCuadrado="SoloMia";
+}
+
+let a=new Poligono_regular(4,'Cuadrado');
+let b=new Poligono_regular(3,"Triangulo");
+let c=new Cuadrado();
+
+console.log(c)
+console.log(c.mostrarInfo())
+
+
+a.U=4;
+
+console.log(a.Angulo_Interior());
+console.log(a)
+console.log(b);
+console.log(c.Angulo_Interior())
+                            </pre>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+
+         <!--Trabajando con JSON. -->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>Trabajando con JSON.</h3>
+            </div>
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos">Trabajando con JSON.</a>
+        </div>
+         <!--Trabajando con. Math-->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>Trabajando con Math</h3>
+            </div>
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math">Trabajando con Math</a>
+        </div>
+         <!--Trabajando conr. Date.-->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>Trabajando con Date.</h3>
+            </div>
+             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date">Trabajando con Date</a>
+        </div>
+         <!--Trabajando con. Expresiones Regulares-->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>Trabajando con Expresiones Regulares.</h3>
+            </div>
+             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions">Trabajando con Expresiones Regulares.</a>
+        </div>
+        <!--Píe. -->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-secondary text-white ">
+                <h4 bg-info> Bibliografía</h4>
+                <a class="text-white" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos">Developer Mozilla</a>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
