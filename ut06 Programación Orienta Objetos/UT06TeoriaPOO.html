@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UT06 Programación Orientada a Objetos </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Cabecera -->
+        <div class="row">
+            <div class="col-6  p-2 mt-2 bg-success text-white" >
+                <h2 bg-info>UT06 Programación Orientada a Objetos </h2>
+            </div>
+            <div class="col-4  mt-2 bg-success"></div>
+            <div class="col-2  p-2 mt-2 bg-success">
+                <img src="https://miro.medium.com/max/800/1*bxEkHw1xewxOFjmGunb-Cw.png" width="70%" alt="">
+            </div>
+        </div>
+         <!--Cabecera Creación de Objetos sin constructor. -->
+        <div class="row">
+            <div class="col-12 p-2 my-2 bg-info text-white ">
+                <h3 bg-info>Creación de Objetos sin constructor.</h3>
+            </div>
+        </div>
+        <!--Contenido Arrays -->
+        <div class="row">
+            <div class="col">
+                <p>Se usa para crear objetos pequeños  directamente mediante el uso de asignaciones de propiedades y/o
+                    métodos a un objeto o cuando se declara el objeto, en los dos casos a medida que se va programando.</p>
+
+                <!--Creación y operaciones básicas sobre arrays-->
+                <div class="  mr-4 card border-dark mt-3 p-3" >
+                    <div class="card-header"><h4>Creación objeto</h4></div>
+                    <div class=" card-body text-dark">
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Creación</h5>
+                        <p>Dos formas de crear <strong>sin constructor objetos</strong></p>
+                        <strong>Ejemplo</strong>
+                        <div class=" rounded p-2 m-1 alert-success" role="alert" >
+                            <p>let poligono_regular = new Object( );</p>
+                            <p>let poligono_regular = {};</p>
+                         </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Añadir una propiedad.</h5>
+                        <p>Para crear una propiedad añadimos al nombre del objeto el operador punto más el nombre
+                            de la propiedad, también podemos inicializar.</p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>poligono_regular.lados=4;</p>
+                            <p>poligono_regular.nombre='cuadrado'</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Añadir un método.</h5>
+                        <p>Para crear un método añadimos el nombre del  objeto el operador punto más el nombre del
+                            método seguido = function () { instrucciones }</p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+poligono_regular.area=function () {
+    return poligono_regular.lados * poligono_regular.lados
+}
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Ejemplo de creación de un objeto en varias instrucciones.</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+let poligono_regular = {};
+
+poligono_regular.lados=4;
+poligono_regular.nombre='cuadrado';
+
+poligono_regular.area=function () {
+    return poligono_regular.lados * poligono_regular.lados
+}
+console.log(Object.keys(poligono_regular))
+console.log(poligono_regular.area())
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Ejemplo de creación de un objeto en una sola instrucciones.</h5>
+                        <p>Se podría crear todo de una de la siguiente manera.</p>
+                        <p>En este caso dentro de las llaves separados por comas añadimos los nombres de las propiedades
+                            y seguido de dos puntos añadimos los posibles valores o funciones que serán los métodos.
+                        </p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+let poligono_regular = {
+	lados:4,
+   	tamanoLado:2,
+   	nombre:'cuadrado',
+   	area:function () {
+        return poligono_regular.tamanoLado * poligono_regular.tamanoLado
+   	}
+};
+console.log(Object.keys(poligono_regular))
+console.log(poligono_regular.area())
+                            </pre>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Eliminar propiedades y métodos de los objetos.</h5>
+                        <p>Se usa el operador <strong>delete nombre_objeto.propiedad</strong> o <strong>delete nombre_objeto.método</strong> </p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>delete poligono_regular.lados;</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Mostrar propiedades y métodos de un objeto.</h5>
+                        <p>Haciendo uso de <strong>for .. in</strong></p>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <pre>
+let poligono_regular = {
+    lados:4,
+    tamanoLado:2,
+    nombre:'cuadrado',
+    area:function () {
+        return poligono_regular.tamanoLado * poligono_regular.tamanoLado
+    }
+};
+for (let propiedad in poligono_regular){
+    console.log(`${propiedad} tiene el valor ${poligono_regular[propiedad]}`)
+}
+                            </pre>
+                        </div>
+                        <p>Se podría usar <strong>typeof</strong> poligono_regular[propiedad] != <strong>“function”</strong> para no mostrar las
+                            funciones o == para mostrar solo las funciones.</p>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Un Array puede contener diferentes tipos de elementos.</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>myArray[0] = Date.now;</p>
+                            <p>myArray[1] = myFunction;</p>
+                            <p>myArray[2] = myCars;</p>
+                        </div>
+                        <h5 class="p-2 bg-warning rounded  bordered card-title">Declarar Array como const.</h5>
+                        <div class="rounded  p-2 m-1 alert-success" role="alert" >
+                            <p>const  cars = ["Saab", "Volvo", "BMW"];</p>
+                            <p>var cars2 = [“hola”,”juan”];</p>
+                            <p>cars[1]=”Abarth”;</p>
+                            <p>cars = cars2 ; //Esto da error</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
